@@ -1,0 +1,129 @@
+/*
+Stylus variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon_home_width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon_home = x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet = width height image $spritesheet_sprites;
+*/
+$instagram_name = 'instagram';
+$instagram_x = 0px;
+$instagram_y = 0px;
+$instagram_offset_x = 0px;
+$instagram_offset_y = 0px;
+$instagram_width = 41px;
+$instagram_height = 41px;
+$instagram_total_width = 81px;
+$instagram_total_height = 81px;
+$instagram_image = '~sprites.png';
+$instagram = 0px 0px 0px 0px 41px 41px 81px 81px '~sprites.png' 'instagram';
+$telegram_name = 'telegram';
+$telegram_x = 41px;
+$telegram_y = 0px;
+$telegram_offset_x = -41px;
+$telegram_offset_y = 0px;
+$telegram_width = 40px;
+$telegram_height = 40px;
+$telegram_total_width = 81px;
+$telegram_total_height = 81px;
+$telegram_image = '~sprites.png';
+$telegram = 41px 0px -41px 0px 40px 40px 81px 81px '~sprites.png' 'telegram';
+$vk_name = 'vk';
+$vk_x = 0px;
+$vk_y = 41px;
+$vk_offset_x = 0px;
+$vk_offset_y = -41px;
+$vk_width = 40px;
+$vk_height = 40px;
+$vk_total_width = 81px;
+$vk_total_height = 81px;
+$vk_image = '~sprites.png';
+$vk = 0px 41px 0px -41px 40px 40px 81px 81px '~sprites.png' 'vk';
+$whatsapp_name = 'whatsapp';
+$whatsapp_x = 40px;
+$whatsapp_y = 41px;
+$whatsapp_offset_x = -40px;
+$whatsapp_offset_y = -41px;
+$whatsapp_width = 40px;
+$whatsapp_height = 40px;
+$whatsapp_total_width = 81px;
+$whatsapp_total_height = 81px;
+$whatsapp_image = '~sprites.png';
+$whatsapp = 40px 41px -40px -41px 40px 40px 81px 81px '~sprites.png' 'whatsapp';
+$spritesheet_width = 81px;
+$spritesheet_height = 81px;
+$spritesheet_image = '~sprites.png';
+$spritesheet_sprites = $instagram $telegram $vk $whatsapp;
+$spritesheet = 81px 81px '~sprites.png' $spritesheet_sprites;
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  spriteWidth($icon_home)
+}
+
+.icon-email {
+  sprite($icon_email)
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+spriteWidth($sprite) {
+  width: $sprite[4];
+}
+
+spriteHeight($sprite) {
+  height: $sprite[5];
+}
+
+spritePosition($sprite) {
+  background-position: $sprite[2] $sprite[3];
+}
+
+spriteImage($sprite) {
+  background-image: url($sprite[8]);
+}
+
+sprite($sprite) {
+  spriteImage($sprite)
+  spritePosition($sprite)
+  spriteWidth($sprite)
+  spriteHeight($sprite)
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of Stylus
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+sprites($spritesheet_sprites);
+*/
+sprites($sprites) {
+  for $sprite in $sprites {
+    $sprite_name = $sprite[9];
+    .{$sprite_name} {
+      sprite($sprite);
+    }
+  }
+}
