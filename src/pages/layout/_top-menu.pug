@@ -1,0 +1,9 @@
+.top-panel
+  .logo лого
+  nav.nav
+    ul.menu
+      each val in ['Прогнозы', 'Отзывы', 'Гарантии', 'Франшиза', 'О нас']
+        li.menu__item= val
+  .social-links
+    each val in ['v', 't', 'vk', 'i']
+      a.social-links__link(href='#')= val
