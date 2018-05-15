@@ -1,5 +1,6 @@
 const path = require( 'path' ),
   HtmlWebpackPlugin = require( 'html-webpack-plugin' ),
+  SpriteLoaderPlugin = require( 'svg-sprite-loader/plugin' ),
   SpritesmithPlugin = require( 'webpack-spritesmith' );
 
 const postCSSLoader = {
@@ -35,7 +36,13 @@ module.exports = {
       {
         test: /\.(svg)$/,
         use: [
-          'url-loader',
+          {
+            loader: 'svg-sprite-loader',
+            options: {
+              extract: true,
+              spriteFilename: 'images/sprite-[hash:6].svg'
+            }
+          },
           'svg-transform-loader'
         ]
       },
@@ -132,6 +139,7 @@ module.exports = {
       minify: false,
       env: process.env.NODE_ENV,
       getCriticalCSS: f => f
-    })
+    }),
+    new SpriteLoaderPlugin
   ]
 };

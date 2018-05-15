@@ -36,6 +36,9 @@ module.exports = {
     filename: 'bundle.js',
     chunkFilename: '[name].bundle.js'
   },
+  resolveLoader: {
+    modules: [ 'node_modules', path.resolve( __dirname, 'src/webpack/loaders' )]
+  },
   module: {
     rules: [
       {
