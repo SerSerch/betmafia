@@ -1,6 +1,9 @@
 @import "../../node_modules/normalize.css/normalize.css"
 @import "../../node_modules/tiny-slider/dist/tiny-slider.css"
 
+@import "_util/variables.styl"
+@import "_util/mixins.styl"
+
 body
   font-family 'Open Sans', sans-serif
 
@@ -9,6 +12,9 @@ body
   height 100%
   margin 0
   padding 0
+
+h1
+  margin 0
 
 .app
   display -webkit-box
@@ -22,3 +28,49 @@ body
 
 .footer
   flex 0 0 auto
+
+.container
+  max-width 1170px
+  margin 0 auto
+
+.top-panel
+  display none
+
+.header
+  min-height 796px
+  background-color rgba(0, 0, 0, 0.729412)
+  padding-bottom 50px
+  box-sizing border-box
+  color #fff
+
+  &__title
+    padding-top 200px
+    caption()
+
+.advantages
+  display flex
+  justify-content center
+  padding-top 120px
+
+  &__item
+    flex-grow 1
+    flex-basis 390px
+    text-align center
+
+  &__item-icon
+    height 97px
+
+  &__item-text
+    font-weight 700
+    font-size 16px
+
+.button-next
+  width 70px
+  height 70px
+  margin 0 auto
+  background-color #fff
+
+/* _____ */
+
+.forecasts__title
+  caption()
