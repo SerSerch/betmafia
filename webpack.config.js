@@ -1,6 +1,7 @@
 const path = require( 'path' ),
   ExtractTextWebpackPlugin = require( 'extract-text-webpack-plugin' ),
   HtmlWebpackPlugin = require( 'html-webpack-plugin' ),
+  SpriteLoaderPlugin = require( 'svg-sprite-loader/plugin' ),
   SpritesmithPlugin = require( 'webpack-spritesmith' );
 
 const postCSSLoader = {
@@ -38,7 +39,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(gif|png|jpe?g|svg)$/,
+        test: /\.(gif|png|jpe?g)$/,
         use: [
           {
             loader: 'file-loader',
@@ -52,6 +53,29 @@ module.exports = {
               bypassOnDebug: true,
             }
           }
+        ]
+      },
+      {
+        test: /\.(svg)$/,
+        use: [
+          {
+            loader: 'svg-sprite-loader',
+            options: {
+              extract: true,
+              spriteFilename: 'images/sprite-[hash:6].svg'
+            }
+          },
+          {
+            loader: 'svgo-loader',
+            options: {
+              plugins: [
+                { removeTitle: true },
+                { convertColors: { shorthex: false } },
+                { convertPathData: false }
+              ]
+            }
+          },
+          'svg-transform-loader',
         ]
       },
       {
@@ -148,6 +172,7 @@ module.exports = {
       minify: true,
       env: process.env.NODE_ENV,
       getCriticalCSS
-    })
+    }),
+    new SpriteLoaderPlugin
   ]
 };

@@ -1,9 +1,14 @@
 header.header
 
-  h1.header__title
-    | прогнозы на спорт
-  .advantages
-    .advantages__item Высокие коэфициенты событий
-    .advantages__item 15 лет суммарного опыта нашей команды
-    .advantages__item Уверенные прогнозы, на которые мы ставим сами
-    .button-next далее
+    h1.header__title Прогнозы на спорт
+    .advantages
+        .advantages__item
+            img.advantages__item-icon(src=require("../../svg/stat.svg"), alt="Высокие коэфициенты событий")
+            .advantages__item-text Высокие коэфициенты событий
+        .advantages__item
+            img.advantages__item-icon(src=require("../../svg/brain.svg"), alt="15 лет суммарного опыта нашей команды")
+            .advantages__item-text 15 лет суммарного опыта нашей команды
+        .advantages__item
+            img.advantages__item-icon(src=require("../../svg/money.svg"), alt="Уверенные прогнозы, на которые мы ставим сами")
+            .advantages__item-text Уверенные прогнозы, на которые мы ставим сами
+        .button-next далее

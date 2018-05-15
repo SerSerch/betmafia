@@ -1,0 +1,24 @@
+<svg class="svgicon" id="official" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+    <style> #official path, #official circle, #official polygon, #official rect {
+        fill: rgb(0, 0, 0)
+        }
+
+        path {
+        fill: none
+        }
+
+        #official path[fill="none"], #official circle[fill="none"], #official polygon[fill="none"], #official rect[fill="none"] {
+        fill: none
+        } </style>
+    <path fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d=" M59,16.148c0-3.678-2.982-6.661-6.661-6.661H7.659C3.982,9.487,1,12.47,1,16.148v27.704c0,3.679,2.982,6.661,6.659,6.661h44.68 c3.679,0,6.661-2.981,6.661-6.661V16.148z"></path>
+    <line fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="48.55" y1="17.494" x2="58.957" y2="17.494"></line>
+    <line fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="1" y1="17.494" x2="31.914" y2="17.494"></line>
+    <circle fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="8.36" cy="13.462" r="0.656"></circle>
+    <circle fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="13.328" cy="13.462" r="0.656"></circle>
+    <circle fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="18.233" cy="13.462" r="0.656"></circle>
+    <path fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d=" M40.286,43.852c-1.261,1.288-3.004,3.974-3.701,3.822c-0.906-0.196-1.053-0.901-1.133-2.119l0.017-0.312"></path>
+    <path fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d=" M45.085,31.673l2.392,12.805c0.079,1.218-0.151,2.234-0.841,2.295c-0.303,0.028-1.172-0.681-2.142-1.475"></path>
+    <path fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d=" M43.721,31.751l0.865,12.934c-0.062,1.224-0.41,2.213-1.1,2.203c-0.691-0.008-3.833-4.118-4.918-4.132 c-1.086-0.013-4.267,4.293-5.14,4.003c-0.874-0.289-0.935-1.006-0.874-2.23l2.182-12.802"></path>
+    <path fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d=" M50.1,21.526l-1.537-1.538v-2.175c0-1.489-1.208-2.695-2.699-2.695h-2.172l-1.538-1.539c-1.054-1.052-2.764-1.052-3.816,0 L36.8,15.118h-2.173c-1.489,0-2.697,1.207-2.697,2.695v2.175l-1.539,1.538c-1.052,1.053-1.052,2.76,0,3.814l1.539,1.538v2.174 c0,1.49,1.208,2.697,2.697,2.697h2.173l1.539,1.538c1.052,1.054,2.762,1.054,3.816,0l1.538-1.538h2.172 c1.491,0,2.699-1.207,2.699-2.697v-2.174L50.1,25.34C51.154,24.286,51.154,22.579,50.1,21.526z"></path>
+    <circle fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="40.247" cy="23.432" r="5.843"></circle>
+</svg>

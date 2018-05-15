@@ -29,8 +29,15 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(gif|png|jpe?g|svg)$/,
+        test: /\.(gif|png|jpe?g)$/,
         use: 'url-loader'
+      },
+      {
+        test: /\.(svg)$/,
+        use: [
+          'url-loader',
+          'svg-transform-loader'
+        ]
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
