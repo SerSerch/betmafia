@@ -1,5 +1,9 @@
-/*
-  подключаем блоки, как в mobile.styl
-  медиазапросы тут практически не нужны,
-  так как файл подключается по медиазапросу (см pages/layout/_end)
-*/
+@import "_util/variables.styl"
+@import "_util/mixins.styl"
+
+// подключаем отдельные блоки десктоп верстки
+@import "tablet/header.styl"
+@import "tablet/forecasts.styl"
+@import "tablet/feedback.styl"
+@import "tablet/become-partner.styl"
+@import "tablet/about.styl"
