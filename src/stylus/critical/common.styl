@@ -39,9 +39,9 @@ h1
 .header
   min-height 796px
   background-color rgba(0, 0, 0, 0.729412)
-  padding-bottom 50px
   box-sizing border-box
-  color #fff
+  color pcolor
+  padding-bottom 50px
 
   &__title
     padding-top 200px
@@ -51,11 +51,14 @@ h1
   display flex
   justify-content center
   padding-top 120px
+  flex-wrap wrap
 
   &__item
     flex-grow 1
     flex-basis 390px
     text-align center
+    box-sizing border-box
+    padding 5px
 
   &__item-icon
     height 97px
@@ -63,14 +66,90 @@ h1
   &__item-text
     font-weight 700
     font-size 16px
+    min-height 180px
+    max-width 300px
+    margin 0 auto
+    box-sizing border-box
+    padding-top 10px
 
 .button-next
   width 70px
   height 70px
   margin 0 auto
-  background-color #fff
+  text-align center
+  &__icon
+    width 12px
+    height 20px
+    transform rotate(90deg)
+    color pcolor
+    display inline-block
+    vertical-align middle
+    position relative
+    font-style normal
+    text-align left
+    text-indent -9999px
+    direction ltr
+    &:before,
+    &:after
+      content: ''
+      pointer-events none
+      width 14px
+      height 3px
+      position absolute
+      bottom 0
+      margin auto 0
+      right 2px
+      box-shadow inset 0 0 0 32px
+      transform-origin right
+    &:before
+      top 2px
+      transform rotate(45deg)
+    &:after
+      top 0
+      transform rotate(-45deg)
 
 /* _____ */
 
-.forecasts__title
-  caption()
+.forecasts
+  min-height 796px
+  &__title
+    caption()
+
+.forecasts-purchase
+  display flex
+  flex-wrap wrap
+  justify-content center
+  &__item
+    min-height 280px
+    flex-grow 1
+    flex-basis 370px
+    max-width 370px
+    text-align center
+    box-sizing border-box
+    padding 10px
+    margin 10px
+    box-shadow 0px 2px 5px 0px rgba(0, 0, 0, 0.5)
+    border-radius 5px
+  &__picture
+    width 100%
+    height 200px
+  &__name
+    display flex
+    justify-content center
+    align-items center
+    min-height 46px
+    padding-top 5px
+    box-sizing border-box
+    &_big
+      font-size 36px
+      font-weight 700
+  &__buy
+    width 76px
+    height 34px
+    margin 10px auto
+    line-height 34px
+    text-align center
+    color pcolor
+    background-color scolor
+    box-shadow 0px 2px 5px 0px rgba(0, 0, 0, 0.5)
+    border-radius 5px
