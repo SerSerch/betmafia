@@ -1,4 +1,5 @@
 import domready from 'domready';
+import { tns } from "../../node_modules/tiny-slider/src/tiny-slider.module"
 
 const compose = ( ...fns ) => value =>
     fns.reduceRight(
