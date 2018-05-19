@@ -2,5 +2,11 @@ footer.footer
     .social-links
         each val in ['v', 't', 'vk', 'i']
             a.social-links__link(href='#')= val
-    .footer__services
-    .footer__copyright
+    .services.container
+        -var list = ['app_store.png', 'logoblack.png', 'google_app.png', 'yandex.png', 'visa.png', 'mobile.png']
+        each val in list
+            a.services__link(href="#")
+                -var srcv = "/img/" + val
+                img.services__img(src=srcv, alt=val)
+    span.footer__copyright
+        |Все права защищены. Betmafia ©  2015-2017
