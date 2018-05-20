@@ -1,19 +1,53 @@
 import domready from 'domready';
 import lazyframe from 'lazyframe';
 import browser from 'bowser';
-import { autoPlayYoutubeVideo } from './video';
+import {
+  autoPlayYoutubeVideo,
+  lazyLoadYoutubePlayers,
+  loadYoutubePlayers
+} from './youtube';
+import { loadCSS } from 'fg-loadcss';
 
-const compose = ( ...fns ) => value =>
+const invoke = fn => fn(),
+  compose = ( ...fns ) => value =>
     fns.reduceRight(
       ( currentValue, fn ) => fn( currentValue ),
       value
     ),
-  addClass = element => className => element.classList.add( className ),
-  cssrelpreload = () => require( 'imports-loader?this=>global!../../node_modules/fg-loadcss/src/cssrelpreload.js' ),
-  initIFrames = () =>
-    lazyframe( '.lazyframe', {
-      lazyload: true
-    }),
+  curry = function ( fn ) {
+    let handler;
+    const args = [];
+
+    handler = ( ...data ) => {
+      if ( data.length > 0 ) {
+        const argsCount = args.push( ...data );
+        if ( argsCount !== fn.length ) {
+          return handler;
+        }
+      }
+      return fn.apply( this, args );
+    };
+
+    return handler;
+  },
+  ifElse = curry(
+    ( comparator, arg1, arg2 ) => comparator ? arg1 : arg2
+  ),
+  hasClass = curry(
+    ( element, className ) => element.classList.contains( className )
+  ),
+  addClass = curry(
+    ( element, className ) => element.classList.add( className )
+  ),
+  preloadCSS = () => {
+    window.loadCSS = loadCSS;
+    require( 'imports-loader?this=>global!../../node_modules/fg-loadcss/src/cssrelpreload.js' )
+  },
+  initYoutubePlayers = () => invoke( ifElse(
+    hasClass( document.documentElement, 'device_desktop' ),
+    lazyLoadYoutubePlayers,
+    loadYoutubePlayers
+  )),
   initBackgroundVideo = () =>
     document
       .querySelectorAll( '.device_desktop .youtube-video' )
@@ -31,4 +65,4 @@ const compose = ( ...fns ) => value =>
     ltIE10 ? window.onload = handler : domready( handler );
   };
 
-export { compose, ready, cssrelpreload, initIFrames, initBackgroundVideo, initDeviceClass };
+export { compose, ready, preloadCSS, initYoutubePlayers, initBackgroundVideo, initDeviceClass };

@@ -1,23 +1,20 @@
 import 'promise-polyfill/src/polyfill';
-import { loadCSS } from 'fg-loadcss';
 import {
   ready,
-  cssrelpreload,
+  preloadCSS,
   compose,
-  initIFrames,
+  initYoutubePlayers,
   initBackgroundVideo,
   initDeviceClass
 } from './common';
 import { initSliders } from './sliders';
 
-window.loadCSS = loadCSS;
-
 const onload = compose(
   initSliders,
-  initIFrames,
+  initYoutubePlayers,
   initBackgroundVideo,
   initDeviceClass,
-  cssrelpreload
+  preloadCSS
 );
 
 ready( onload );
