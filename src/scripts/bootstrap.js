@@ -1,11 +1,10 @@
 import 'promise-polyfill/src/polyfill';
 import { loadCSS } from 'fg-loadcss';
-import { ready } from './common';
+import { ready, cssrelpreload, compose } from './common';
+import { initSliders } from './sliders';
 
 window.loadCSS = loadCSS;
 
-const onload = () => {
-  require( 'imports-loader?this=>global!../../node_modules/fg-loadcss/src/cssrelpreload.js' );
-};
+const onload = compose( cssrelpreload, initSliders );
 
 ready( onload );
