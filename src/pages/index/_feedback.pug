@@ -1,4 +1,10 @@
 section.feedback
-  .feedback__blackout
-    h3.feedback__title отзывы наших клиентов
-    .slider
+    .feedback__blackout
+        h3.feedback__title отзывы наших клиентов
+        .feedback__list
+            - let feedback__index = 0;
+            while feedback__index++ < 20
+                .feedback__item
+                    img.feedback__image(src=require(`../../img/feedback/feedback${feedback__index}.jpg`))
+
+
