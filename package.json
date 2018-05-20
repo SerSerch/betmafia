@@ -19,6 +19,7 @@
   },
   "homepage": "https://gitlab.com/usefulweb/betmafia#README",
   "dependencies": {
+    "bowser": "^1.9.3",
     "domready": "^1.0.8",
     "fg-loadcss": "^2.0.1",
     "lazyframe": "^1.1.6",

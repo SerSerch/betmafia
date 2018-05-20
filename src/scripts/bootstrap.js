@@ -5,17 +5,19 @@ import {
   cssrelpreload,
   compose,
   initIFrames,
-  initBackgroundVideo
+  initBackgroundVideo,
+  initDeviceClass
 } from './common';
 import { initSliders } from './sliders';
 
 window.loadCSS = loadCSS;
 
 const onload = compose(
-  cssrelpreload,
   initSliders,
   initIFrames,
-  initBackgroundVideo
+  initBackgroundVideo,
+  initDeviceClass,
+  cssrelpreload
 );
 
 ready( onload );

@@ -1,6 +1,8 @@
 import YT from 'youtube-player';
+import browser from 'bowser';
 
-const autoPlayVideo = element => {
+const autoPlayYoutubeVideo = element => {
+  element.classList.add( 'youtube-video_ready' );
   const player = YT( element, {
     videoId: element.dataset.videoId,
     playerVars: {
@@ -22,4 +24,4 @@ const autoPlayVideo = element => {
 
 };
 
-export { autoPlayVideo }
+export { autoPlayYoutubeVideo };

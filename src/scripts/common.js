@@ -1,12 +1,14 @@
 import domready from 'domready';
 import lazyframe from 'lazyframe';
-import { autoPlayVideo } from './video';
+import browser from 'bowser';
+import { autoPlayYoutubeVideo } from './video';
 
 const compose = ( ...fns ) => value =>
     fns.reduceRight(
       ( currentValue, fn ) => fn( currentValue ),
       value
     ),
+  addClass = element => className => element.classList.add( className ),
   cssrelpreload = () => require( 'imports-loader?this=>global!../../node_modules/fg-loadcss/src/cssrelpreload.js' ),
   initIFrames = () =>
     lazyframe( '.lazyframe', {
@@ -14,12 +16,19 @@ const compose = ( ...fns ) => value =>
     }),
   initBackgroundVideo = () =>
     document
-      .querySelectorAll( '.youtube-video' )
-      .forEach( autoPlayVideo ),
+      .querySelectorAll( '.device_desktop .youtube-video' )
+      .forEach( autoPlayYoutubeVideo ),
+  initDeviceClass = () =>
+    [
+      browser.mobile && 'device_mobile',
+      browser.tablet && 'device_tablet',
+      ( !browser.tablet && !browser.mobile ) && 'device_desktop'
+    ].filter( c => c )
+      .forEach( addClass( document.documentElement )),
   ready = handler => {
-    const isIE10 = navigator.appVersion.indexOf( 'MSIE 10' ) !== -1;
+    const ltIE10 = browser.msie && browser.version <= 11;
 
-    isIE10 ? window.onload = handler : domready( handler );
+    ltIE10 ? window.onload = handler : domready( handler );
   };
 
-export { compose, ready, cssrelpreload, initIFrames, initBackgroundVideo };
+export { compose, ready, cssrelpreload, initIFrames, initBackgroundVideo, initDeviceClass };
