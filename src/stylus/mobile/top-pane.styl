@@ -1,0 +1,49 @@
+.top-panel
+  display flex
+  position fixed
+  top 0
+  left 0
+  right 0
+  min-height 50px
+  background-color rgba(15, 14, 14, 0.95)
+  box-sizing border-box
+  
+.menu-button
+  position absolute
+  right 0
+  height 50px
+  width 50px
+  &__checkbox
+    display none
+  
+.nav
+  position fixed
+  top 50px
+  bottom 0
+  right 0
+  width 270px
+  background-color rgba(15, 14, 14, 0.95)
+  color pcolor
+  box-sizing border-box
+  overflow-y auto
+  overflow-x hidden
+
+.menu
+  display flex
+  flex-direction column
+  list-style none
+  margin 0
+  padding 0
+  &__item
+    padding 8px 20px
+    margin 5px
+    border-radius 5px
+    font-size 14px
+    background-color rgba(15, 14, 14, 0.19)
+    border 1px solid #e7e7e7
+    box-sizing border-box
+    &:hover,
+    &:active
+      background-color pcolor
+      color scolor
+      cursor pointer
