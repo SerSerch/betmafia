@@ -21,7 +21,7 @@ const invoke = fn => fn(),
     handler = ( ...data ) => {
       if ( data.length > 0 ) {
         const argsCount = args.push( ...data );
-        if ( argsCount !== fn.length ) {
+        if ( argsCount < fn.length ) {
           return handler;
         }
       }
