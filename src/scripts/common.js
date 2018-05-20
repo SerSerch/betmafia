@@ -1,5 +1,6 @@
 import domready from 'domready';
 import lazyframe from 'lazyframe';
+import { autoPlayVideo } from './video';
 
 const compose = ( ...fns ) => value =>
     fns.reduceRight(
@@ -11,10 +12,14 @@ const compose = ( ...fns ) => value =>
     lazyframe( '.lazyframe', {
       lazyload: true
     }),
+  initBackgroundVideo = () =>
+    document
+      .querySelectorAll( '.youtube-video' )
+      .forEach( autoPlayVideo ),
   ready = handler => {
     const isIE10 = navigator.appVersion.indexOf( 'MSIE 10' ) !== -1;
 
     isIE10 ? window.onload = handler : domready( handler );
   };
 
-export { compose, ready, cssrelpreload, initIFrames };
+export { compose, ready, cssrelpreload, initIFrames, initBackgroundVideo };

@@ -24,7 +24,8 @@
     "lazyframe": "^1.1.6",
     "normalize.css": "^8.0.0",
     "promise-polyfill": "^7.1.2",
-    "tiny-slider": "^2.6.0"
+    "tiny-slider": "^2.6.0",
+    "youtube-player": "^5.5.0"
   },
   "devDependencies": {
     "autoprefixer": "^8.3.0",
