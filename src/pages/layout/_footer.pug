@@ -6,7 +6,6 @@ footer.footer
         -var list = ['app_store.png', 'logoblack.png', 'google_app.png', 'yandex.png', 'visa.png', 'mobile.png']
         each val in list
             a.services__link(href="#")
-                -var srcv = "/img/" + val
-                img.services__img(src=srcv, alt=val)
+                img.services__img(src=require(`../../img/${val}`), alt="сервис")
     span.footer__copyright
         |Все права защищены. Betmafia ©  2015-2017
