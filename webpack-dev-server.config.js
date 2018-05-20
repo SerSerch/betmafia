@@ -133,7 +133,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      title: 'Букеты цветов',
+      title: 'Betmafia',
       template: 'src/pages/index.pug',
       inject: false,
       minify: false,
