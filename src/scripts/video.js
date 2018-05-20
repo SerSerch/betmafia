@@ -4,6 +4,11 @@ const autoPlayVideo = element => {
   const player = YT( element, {
     videoId: element.dataset.videoId,
     playerVars: {
+      wmode: 'opaque',
+      iv_load_policy: 3,
+      rel: 0,
+      branding: 0,
+      showinfo: 0,
       controls: 0,
       frameborder: 1,
       allowfullscreen: true
