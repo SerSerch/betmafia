@@ -1,6 +1,6 @@
 .top-panel
   .container
-    a(href="#")
+    a.logo-link(href="#")
       img.logo(src=require('../../img/logo.png'), alt="Betmafia")
     nav.nav
       input.menu-checkbox(type="checkbox" id="menu-checkbox")
@@ -11,6 +11,11 @@
           li.menu__item
             label.menu__section(for="menu-checkbox")= val
         li.social-links
-          each val in ['v', 't', 'vk', 'i']
-            a.social-links__link(href='#')
-              i.social-links__icon.social-links__link_=val
+          a.social-links__link(href='#')
+            i.social-links__icon.social-links__icon_v
+          a.social-links__link(href='#')
+            i.social-links__icon.social-links__icon_t
+          a.social-links__link(href='#')
+            i.social-links__icon.social-links__icon_vk
+          a.social-links__link(href='#')
+            i.social-links__icon.social-links__icon_i

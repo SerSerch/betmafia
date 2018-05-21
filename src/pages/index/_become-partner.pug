@@ -1,9 +1,14 @@
 section.become-partner
   .become-partner__blackout
     h3.become-partner__title бизнес с прогнозами на спорт
+    p.become-partner__text
+      | Создавайте аналогичную компанию по продаже прогнозов на спорт.
+    p.become-partner__text
+      | Мы обеспечим Вас всем необходимым.
     form.container
-      input(type="text")
-      input(type="email")
-      input(type="tel")
+      .become-partner__inputs
+        input.become-partner__name(type="text", placeholder="Ваше имя")
+        input.become-partner__email(type="email", placeholder="Ваш email")
+        input.become-partner__phone(type="tel", placeholder="Ваш телефон")
       .captcha
-      input(type="button")
+      input.become-partner__submit(type="button", value="Стать партнером")

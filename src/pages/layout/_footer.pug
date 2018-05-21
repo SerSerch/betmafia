@@ -1,7 +1,13 @@
 footer.footer
     .social-links
-        each val in ['v', 't', 'vk', 'i']
-            a.social-links__link(href='#')= val
+        a.social-links__link(href='#')
+            i.social-links__icon.social-links__icon_v
+        a.social-links__link(href='#')
+            i.social-links__icon.social-links__icon_t
+        a.social-links__link(href='#')
+            i.social-links__icon.social-links__icon_vk
+        a.social-links__link(href='#')
+            i.social-links__icon.social-links__icon_i
     .services.container
         -var list = ['app_store.png', 'logoblack.png', 'google_app.png', 'yandex.png', 'visa.png', 'mobile.png']
         each val in list

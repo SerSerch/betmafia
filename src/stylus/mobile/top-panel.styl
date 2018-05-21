@@ -5,13 +5,16 @@
   top 0
   left 0
   right 0
-  min-height 50px
+  height 50px
   background-color rgba(15, 14, 14, 0.95)
   box-sizing border-box
 
 .logo
-  height 50px
-  margin-left 10px
+  height 40px
+  &-link
+    display inline-block
+    font-size 0
+    margin 5px 10px
 
 .menu-button
   position absolute
@@ -81,11 +84,12 @@
   padding 0
   transition: all 0.3s ease-in-out;
   &__item
-    margin 5px 10px
+    margin 5px 5px
     font-size 14px
   &__section
     display block
-    padding 8px 20px
+    text-align center
+    padding 8px 10px
     border 1px solid #e7e7e7
     box-sizing border-box
     background-color rgba(15, 14, 14, 0.19)
@@ -109,3 +113,20 @@
       transform rotate(45deg)
   &-checkbox:checked ~ &
     right 0
+
+.social-links
+  display flex
+  justify-content center
+
+  &__icon
+    display block
+    width 40px
+    height 40px
+    margin 10px
+    background-image: url("../img/sprites.png")
+    &_v
+      background-position 40px 40px
+    &_t
+      background-position 40px 0
+    &_vk
+      background-position 0px 40px
