@@ -6,7 +6,13 @@ const initFeedback = () =>
       container: '.feedback__list',
       items: 1,
       slideBy: 'page',
-      lazyload: true
+      lazyload: true,
+      autoplay: true,
+      loop: true,
+      autoplayButton: false,
+      autoplayButtonOutput: false,
+      navContainer: document.getElementById( 'feedback__nav' ),
+      controlsContainer: document.getElementById( 'feedback__controls' )
     }),
   init = compose( initFeedback );
 

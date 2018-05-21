@@ -13,16 +13,54 @@
     box-sizing border-box
   &__title
     caption()
-  &__list
-    margin 0 60px 60px 60px
+  &__container
+    padding 20px 60px
+    box-sizing border-box
+    position relative
+  &__box
     border 1px solid #fff
-.slider
-  min-height 650px
+  &__item-dot
+    width 16px
+    height 16px
+    border-radius 50%
+    background-color #666
+    margin 0 5px
+    border 1px solid rgba(255, 255, 255, .5)
+    display inline-block
+    outline none
+    cursor pointer
+    &.tns-nav-active
+      background-color: #000
+  &__nav
+    margin-top 10px
+    text-align center
+  &__item
+    text-align center
+
+  &__control
+    position absolute
+    top 50%
+    width 32px
+    height 32px
+    outline none
+    cursor pointer
+    &_next
+      sprite-img($feedback_next)
+      right 15px
+    &_prev
+      sprite-img($feedback_prev)
+      left 15px
+  .tns-nav
+    display inline-block
+  .tns-outer
+    text-align center
+  /*.slider
+    min-height 650px*/
 
 .tns-inner
   max-width 100%
-.tns-controls,
-.tns-nav
-  display none
+//.tns-controls,
+//.tns-nav
+//  display none
 
 

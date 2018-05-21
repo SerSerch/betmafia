@@ -1,8 +1,17 @@
 section.feedback
     .feedback__blackout
         h3.feedback__title отзывы наших клиентов
-        .feedback__list
-            - let feedback__index = 0;
-            while feedback__index++ < 20
-                .feedback__item
-                    img.feedback__image(src=require(`../../img/feedback/feedback${feedback__index}.jpg`), alt="")
+        .feedback__container
+            .feedback__box
+                - let feedback__index = 0, feedback__count = 20
+                .feedback__list
+                    while feedback__index++ < feedback__count
+                        .feedback__item
+                            img.feedback__image(src=require(`../../img/feedback/feedback${feedback__index}.jpg`), alt="")
+            .feedback__nav#feedback__nav
+                - feedback__index = 0
+                while feedback__index++ < feedback__count
+                    .feedback__item-dot
+            .feedback__controls#feedback__controls
+                .feedback__control.feedback__control_prev
+                .feedback__control.feedback__control_next
