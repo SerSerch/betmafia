@@ -2,44 +2,22 @@ import domready from 'domready';
 import lazyframe from 'lazyframe';
 import browser from 'bowser';
 import {
+  compose,
+  invoke,
+  ifElse,
+} from './functional';
+import {
+  addClass,
+  hasClass,
+} from './dom';
+import {
   autoPlayYoutubeVideo,
   lazyLoadYoutubePlayers,
   loadYoutubePlayers
 } from './youtube';
 import { loadCSS } from 'fg-loadcss';
 
-const invoke = fn => fn(),
-  compose = ( ...fns ) => value =>
-    fns.reduceRight(
-      ( currentValue, fn ) => fn( currentValue ),
-      value
-    ),
-  curry = function ( fn ) {
-    let handler;
-    const args = [];
-
-    handler = ( ...data ) => {
-      if ( data.length > 0 ) {
-        const argsCount = args.push( ...data );
-        if ( argsCount < fn.length ) {
-          return handler;
-        }
-      }
-      return fn.apply( this, args );
-    };
-
-    return handler;
-  },
-  ifElse = curry(
-    ( comparator, arg1, arg2 ) => comparator ? arg1 : arg2
-  ),
-  hasClass = curry(
-    ( element, className ) => element.classList.contains( className )
-  ),
-  addClass = curry(
-    ( element, className ) => element.classList.add( className )
-  ),
-  preloadCSS = () => {
+const preloadCSS = () => {
     window.loadCSS = loadCSS;
     require( 'imports-loader?this=>global!../../node_modules/fg-loadcss/src/cssrelpreload.js' )
   },
@@ -65,4 +43,4 @@ const invoke = fn => fn(),
     ltIE10 ? window.onload = handler : domready( handler );
   };
 
-export { compose, ready, preloadCSS, initYoutubePlayers, initBackgroundVideo, initDeviceClass };
+export { ready, preloadCSS, initYoutubePlayers, initBackgroundVideo, initDeviceClass };

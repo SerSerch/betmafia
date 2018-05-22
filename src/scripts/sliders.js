@@ -1,5 +1,5 @@
 import { tns as makeSlider } from '../../node_modules/tiny-slider/src/tiny-slider.module';
-import { compose } from './common';
+import { compose } from './functional';
 
 const initFeedback = () =>
     makeSlider({

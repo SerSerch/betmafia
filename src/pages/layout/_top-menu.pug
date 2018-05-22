@@ -1,21 +1,31 @@
 .top-panel
   .container
     a.logo-link(href="#")
-      img.logo(src=require('../../img/logo.png'), alt="Betmafia")
+      img.logo(src=require('../../img/logo-alt.png'), alt="Betmafia")
     nav.nav
       input.menu-checkbox(type="checkbox" id="menu-checkbox")
       label.menu-button(for="menu-checkbox")
         i.menu-button__icon
-      ul.menu
-        each val in ['Прогнозы', 'Отзывы', 'Гарантии', 'Франшиза', 'О нас']
+      label.menu__background(for="menu-checkbox")
+      .menu
+        ul.menu__container
           li.menu__item
-            label.menu__section(for="menu-checkbox")= val
-        li.social-links
-          a.social-links__link(href='#')
-            i.social-links__icon.social-links__icon_whatsapp
-          a.social-links__link(href='#')
-            i.social-links__icon.social-links__icon_telegram
-          a.social-links__link(href='#')
-            i.social-links__icon.social-links__icon_vk
-          a.social-links__link(href='#')
-            i.social-links__icon.social-links__icon_instagram
+            a.menu__section(href="#forecasts") Прогнозы
+          li.menu__item
+            a.menu__section(href="#feedback") Отзывы
+          li.menu__item
+            a.menu__section(href="#guarantees") Гарантии
+          li.menu__item
+            a.menu__section(href="#become-partner") Франшиза
+          li.menu__item
+            a.menu__section(href="#about") О нас
+          li.social-links
+            a.social-links__link(href='#')
+              i.social-links__icon.social-links__icon_whatsapp
+            a.social-links__link(href='#')
+              i.social-links__icon.social-links__icon_telegram
+            a.social-links__link(href='#')
+              i.social-links__icon.social-links__icon_vk
+            a.social-links__link(href='#')
+              i.social-links__icon.social-links__icon_instagram
+

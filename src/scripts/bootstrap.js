@@ -1,8 +1,13 @@
 import 'promise-polyfill/src/polyfill';
 import {
+  compose
+} from './functional';
+import {
+  initTopPanel
+} from './top-panel';
+import {
   ready,
   preloadCSS,
-  compose,
   initYoutubePlayers,
   initBackgroundVideo,
   initDeviceClass
@@ -14,6 +19,7 @@ const onload = compose(
   initYoutubePlayers,
   initBackgroundVideo,
   initDeviceClass,
+  initTopPanel,
   preloadCSS
 );
 
