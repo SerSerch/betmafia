@@ -1,6 +1,6 @@
 section.feedback
     .feedback__blackout
-        h3.feedback__title отзывы наших клиентов
+        h3.feedback__title Отзывы наших клиентов
         .feedback__container
             .feedback__box
                 - let feedback__index = 0, feedback__count = 20
@@ -15,3 +15,5 @@ section.feedback
             .feedback__controls#feedback__controls
                 .feedback__control.feedback__control_prev
                 .feedback__control.feedback__control_next
+        .feedback__divider
+            include ../layout/_left-divider

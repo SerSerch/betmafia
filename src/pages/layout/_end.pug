@@ -1,4 +1,5 @@
 script(src="bundle.js", async)
+script(src="http://www.google.com/recaptcha/api.js", async)
 
 if htmlWebpackPlugin.options.env === 'production'
     - const onload = "this.onload=null;this.rel='stylesheet'";

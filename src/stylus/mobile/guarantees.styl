@@ -2,22 +2,29 @@
   min-height 796px
   padding-bottom 50px
   box-sizing border-box
+  position relative
   &__title
     caption()
-  &-info
-    display flex
-    flex-wrap wrap
-    justify-content center
-    &__item
-      min-height 280px
-      flex-grow 1
-      flex-basis 370px
-      max-width 370px
-      text-align center
-      box-sizing border-box
-      padding 10px
-      margin 10px
-    &__img
-      height 90px
-    &__text
-      padding 5px
+  &__divider
+    position absolute
+    width 100%
+    height 50px
+    bottom -50px
+    z-index 2
+.guarantees-info
+  display flex
+  flex-wrap wrap
+  justify-content center
+  &__item
+    min-height 280px
+    flex-grow 1
+    flex-basis 370px
+    max-width 370px
+    text-align center
+    box-sizing border-box
+    padding 10px
+    margin 10px
+  &__img
+    height 90px
+  &__text
+    padding 5px
