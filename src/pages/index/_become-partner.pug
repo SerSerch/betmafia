@@ -9,12 +9,10 @@ section.become-partner#become-partner
     form.container
       .become-partner__form-row
         .become-partner__controls
-          input.become-partner__name(type="text", placeholder="Ваше имя")
-          input.become-partner__email(type="email", placeholder="Ваш email")
           input.become-partner__phone(type="tel", placeholder="Ваш телефон")
       .become-partner__form-row
         .g-recaptcha.become-partner__captcha(data-sitekey='6LfxoVoUAAAAAPzINALVJaZ-4sp6eLmg-xux8o6G')
       .become-partner__form-row
-        input.become-partner__submit(type="button", value="Стать партнером")
+        a.become-partner__submit Стать партнером
   .become-partner__divider
     include ../layout/_left-divider

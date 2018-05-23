@@ -1,4 +1,4 @@
-import { on, addClass, removeClass, attr } from './dom';
+import { on, addClass, removeClass, hasClass, attr } from './dom';
 
 const findModal = element => {
     const selector = attr( element, 'href' ) || element.dataset.toggle;
@@ -16,8 +16,8 @@ const findModal = element => {
         open( modal );
         e.preventDefault();
       }
-      else if ( element = target.closest( '.modal' )) {
-        close( element );
+      else if ( hasClass( target, 'modal' )) {
+        close( target );
       }
       else if ( element = target.closest( '.modal-close' )) {
         const modal = element.closest( '.modal' );

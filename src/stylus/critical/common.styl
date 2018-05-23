@@ -80,6 +80,7 @@ iframe
     height 50px
   &__title
     caption()
+    font-size 30px
 
 .advantages
   display flex
@@ -175,10 +176,17 @@ iframe
     box-sizing border-box
     padding 10px
     margin 10px
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
     //box-shadow 0px 2px 5px 0px rgba(0, 0, 0, 0.5)
     border-radius 5px
   &__picture
-    height 200px
+    //height 200px
+    flex-grow 1
+    width 150px
+    object-fit contain;
   &__name
     display flex
     justify-content center
