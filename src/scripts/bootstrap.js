@@ -3,6 +3,9 @@ import {
   compose
 } from './functional';
 import {
+  initModals
+} from './modals';
+import {
   initTopPanel
 } from './top-panel';
 import {
@@ -15,6 +18,7 @@ import {
 import { initSliders } from './sliders';
 
 const onload = compose(
+  initModals,
   initSliders,
   initYoutubePlayers,
   initBackgroundVideo,

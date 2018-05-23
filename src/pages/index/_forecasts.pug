@@ -5,43 +5,37 @@ section.forecasts#forecasts
       img.forecasts-purchase__picture(src=require('../../img/premierleague.png'))
       span.forecasts-purchase__name
         | Английская Премьер Лига
-      .forecasts-purchase__price
-        | 1956 руб.
-      .forecasts-purchase__buy Купить
+      a.forecasts-purchase__buy.modal-toggle(href="#forecasts_pl") Купить
     .forecasts-purchase__item
       img.forecasts-purchase__picture(src=require('../../img/bundesliga.png'))
       span.forecasts-purchase__name
-        |Германия. Бендеслига
-      .forecasts-purchase__price
-        | 1956 руб.
-      .forecasts-purchase__buy Купить
+        | Германия. Бендеслига
+      a.forecasts-purchase__buy.modal-toggle(href="#forecasts_bl") Купить
     .forecasts-purchase__item
       img.forecasts-purchase__picture(src=require('../../img/nhl.png'))
       span.forecasts-purchase__name
         | США. НХЛ
-      .forecasts-purchase__price
-        | 1956 руб.
-      .forecasts-purchase__buy Купить
+      a.forecasts-purchase__buy.modal-toggle(href="#forecasts_usa") Купить
     .forecasts-purchase__item
       img.forecasts-purchase__picture(src=require('../../img/vigoda3.png'))
       span.forecasts-purchase__name.forecasts-purchase__name_big
         | 1 прогноз
       .forecasts-purchase__price
         | 1000 руб.
-      .forecasts-purchase__buy Купить
+      a.forecasts-purchase__buy.modal-toggle(href="#forecasts_1time") Купить
     .forecasts-purchase__item
       img.forecasts-purchase__picture(src=require('../../img/vigoda.png'))
       span.forecasts-purchase__name.forecasts-purchase__name_big
         | 1 неделя
       .forecasts-purchase__price.forecasts-purchase__price_sale
         | 9900 руб.
-      .forecasts-purchase__buy Купить
+      a.forecasts-purchase__buy.modal-toggle(href="#forecasts_1week") Купить
     .forecasts-purchase__item
       img.forecasts-purchase__picture(src=require('../../img/vigoda2.png'))
       span.forecasts-purchase__name.forecasts-purchase__name_big
         | 1 месяц
       .forecasts-purchase__price.forecasts-purchase__price_sale
         | 24000 руб.
-      .forecasts-purchase__buy Купить
+      a.forecasts-purchase__buy.modal-toggle(href="#forecasts_1month") Купить
   .forecasts__divider
     include ../layout/_right-divider
