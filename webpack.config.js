@@ -29,6 +29,7 @@ const postCSSLoader = {
 
 module.exports = {
   entry: [
+    'whatwg-fetch',
     path.join( __dirname, '/src/app.js' )
   ],
   output: {

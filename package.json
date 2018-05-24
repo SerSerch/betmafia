@@ -27,6 +27,7 @@
     "promise-polyfill": "^7.1.2",
     "ramda": "^0.25.0",
     "tiny-slider": "^2.6.0",
+    "whatwg-fetch": "^2.0.4",
     "youtube-player": "^5.5.0"
   },
   "devDependencies": {
