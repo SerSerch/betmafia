@@ -2,40 +2,40 @@ section.forecasts#forecasts
   h3.forecasts__title Прогнозы
   .forecasts-purchase.container
     .forecasts-purchase__item
-      img.forecasts-purchase__picture(src=require('../../img/premierleague.png'))
+      img.forecasts-purchase__picture.forecasts-purchase__picture_apl(src=require('../../img/premierleague.png'))
       span.forecasts-purchase__name
         | Английская Премьер Лига
-      a.forecasts-purchase__buy.modal-toggle(href="#forecasts_pl") Купить
+      a.forecasts-purchase__buy.modal-toggle(href="#forecasts_pl", data-click-goal="apl-buy") Купить
     .forecasts-purchase__item
       img.forecasts-purchase__picture(src=require('../../img/bundesliga.png'))
       span.forecasts-purchase__name
         | Германия. Бундеслига
-      a.forecasts-purchase__buy.modal-toggle(href="#forecasts_bl") Купить
+      a.forecasts-purchase__buy.modal-toggle(href="#forecasts_bl", data-click-goal="bundesliga-buy") Купить
     .forecasts-purchase__item
       img.forecasts-purchase__picture(src=require('../../img/nhl.png'))
       span.forecasts-purchase__name
         | США. НХЛ
-      a.forecasts-purchase__buy.modal-toggle(href="#forecasts_usa") Купить
+      a.forecasts-purchase__buy.modal-toggle(href="#forecasts_usa", data-click-goal="nhl-buy") Купить
     .forecasts-purchase__item
       img.forecasts-purchase__picture(src=require('../../img/vigoda3.png'))
       span.forecasts-purchase__name.forecasts-purchase__name_big
         | 1 прогноз
       .forecasts-purchase__price
         | 1000 руб.
-      a.forecasts-purchase__buy.modal-toggle(href="#forecasts_1time") Купить
+      a.forecasts-purchase__buy.modal-toggle(href="#forecasts_1time", data-click-goal="1times-buy") Купить
     .forecasts-purchase__item
       img.forecasts-purchase__picture(src=require('../../img/vigoda.png'))
       span.forecasts-purchase__name.forecasts-purchase__name_big
         | 1 неделя
       .forecasts-purchase__price.forecasts-purchase__price_sale
         | 9900 руб.
-      a.forecasts-purchase__buy.modal-toggle(href="#forecasts_1week") Купить
+      a.forecasts-purchase__buy.modal-toggle(href="#forecasts_1week", data-click-goal="1week-buy") Купить
     .forecasts-purchase__item
       img.forecasts-purchase__picture(src=require('../../img/vigoda2.png'))
       span.forecasts-purchase__name.forecasts-purchase__name_big
         | 1 месяц
       .forecasts-purchase__price.forecasts-purchase__price_sale
         | 24000 руб.
-      a.forecasts-purchase__buy.modal-toggle(href="#forecasts_1month") Купить
+      a.forecasts-purchase__buy.modal-toggle(href="#forecasts_1month", data-click-goal="1month-buy") Купить
   .forecasts__divider
     include ../layout/_right-divider

@@ -1,13 +1,8 @@
 import 'promise-polyfill/src/polyfill';
-import {
-  compose
-} from './functional';
-import {
-  initModals
-} from './modals';
-import {
-  initTopPanel
-} from './top-panel';
+import { compose } from 'ramda';
+import { initModals } from './modals';
+import { initCounters } from './counters';
+import { initTopPanel } from './top-panel';
 import {
   ready,
   preloadCSS,
@@ -18,6 +13,7 @@ import {
 import { initSliders } from './sliders';
 
 const onload = compose(
+  initCounters,
   initModals,
   initSliders,
   initYoutubePlayers,
