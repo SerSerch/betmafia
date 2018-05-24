@@ -6,13 +6,13 @@ section.become-partner#become-partner
         | Создавайте аналогичную компанию по продаже прогнозов на спорт.
       p
         | Мы обеспечим Вас всем необходимым.
-    form.container
+    form.container.ajax-form(method="POST", action="/request.php")
       .become-partner__form-row
         .become-partner__controls
-          input.become-partner__phone(type="tel", placeholder="Ваш телефон")
+          input.become-partner__phone(type="tel", name="phone", placeholder="Ваш телефон", required)
       .become-partner__form-row
         .g-recaptcha.become-partner__captcha(data-sitekey='6LfxoVoUAAAAAPzINALVJaZ-4sp6eLmg-xux8o6G')
       .become-partner__form-row
-        a.become-partner__submit(href="#", data-click-goal="become-partner") Стать партнером
+        button.become-partner__submit.ajax-form-submit(data-click-goal="become-partner") Стать партнером
   .become-partner__divider
     include ../layout/_left-divider

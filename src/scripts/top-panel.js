@@ -12,11 +12,16 @@ const close = () => menuCheckbox.checked = false,
     let scrollTop = window.pageYOffset;
     const panel = document.querySelector( '.top-panel' ),
       menu = document.querySelector( '.menu' ),
+      activeClass = 'top-panel_active',
+      scrolledClass = 'top-panel_1st-screen-scrolled',
       onclick = e => hasClass( e.target, 'menu__section' ) && close(),
       onscroll = e => {
         const top = window.pageYOffset,
-          show = top < 100 || top < scrollTop;
-        show ? addClass( panel, 'top-panel_active' ) : removeClass( panel, 'top-panel_active' );
+          show = top < 100 || top < scrollTop,
+          headerHeight = document.querySelector( '.header' ).offsetHeight;
+
+        show ? addClass( panel, activeClass ) : removeClass( panel, activeClass );
+        top > headerHeight ? addClass( panel, scrolledClass ) : removeClass( panel, scrolledClass );
         scrollTop = top;
       };
     on( menu, 'click', onclick );

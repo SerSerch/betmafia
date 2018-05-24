@@ -5,6 +5,15 @@ const findModal = element => {
     return document.querySelector( selector );
   },
   open = modal => addClass( modal, 'modal_active' ),
+  openCommonModal = ( title, content ) => {
+    const modal = document.getElementById( 'common-modal' ),
+      bodyElement = modal.querySelector('.modal-body'),
+      titleElement = modal.querySelector('.modal-title');
+
+    bodyElement.innerHTML = content;
+    titleElement.innerHTML = title;
+    open( modal );
+  },
   close = modal => removeClass( modal, 'modal_active' ),
   init = () => {
     const onclick = e => {
@@ -28,5 +37,6 @@ const findModal = element => {
   };
 
 export {
-  init as initModals
+  init as initModals,
+  openCommonModal
 };

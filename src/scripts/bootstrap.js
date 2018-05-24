@@ -3,6 +3,7 @@ import { compose } from 'ramda';
 import { initModals } from './modals';
 import { initCounters } from './counters';
 import { initTopPanel } from './top-panel';
+import { initAjaxForms } from './ajax-forms';
 import {
   ready,
   preloadCSS,
@@ -13,6 +14,7 @@ import {
 import { initSliders } from './sliders';
 
 const onload = compose(
+  initAjaxForms,
   initCounters,
   initModals,
   initSliders,

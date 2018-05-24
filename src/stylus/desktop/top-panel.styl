@@ -1,6 +1,14 @@
 .top-panel
   background-color inherit
   position absolute
+  height auto
+  transition none
+  &_1st-screen-scrolled
+    top -100%
+    position fixed
+    background #000
+  &_active.top-panel_1st-screen-scrolled
+    top 0
 
 .nav
   position absolute
@@ -36,5 +44,6 @@
 
 .logo
   height 90px
+  padding-bottom 20px
   &-link
     margin 20px 0 0 50px

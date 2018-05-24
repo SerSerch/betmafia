@@ -1,7 +1,8 @@
 .top-panel.top-panel_active
   .container
     a.logo-link(href="#")
-      img.logo(src=require('../../img/logo-alt.png'), alt="Betmafia")
+      img.logo.logo_desktop(src=require('../../img/logo-alt.png'), alt="Betmafia")
+      img.logo.logo_mobile(src=require('../../img/logo-mobile.png'), alt="Betmafia")
     nav.nav
       input.menu-checkbox(type="checkbox" id="menu-checkbox")
       label.menu-button(for="menu-checkbox")
@@ -20,7 +21,7 @@
           li.menu__item
             a.menu__section(href="#about") О нас
           li.social-links
-            a.social-links__link.modal-toggle(href='#whatsapp-modal')
+            a.social-links__link(href='https://api.whatsapp.com/send?phone=79388659997' target="_blank")
               i.social-links__icon.social-links__icon_whatsapp
             a.social-links__link(href='https://t-do.ru/betmafia' target="_blank")
               i.social-links__icon.social-links__icon_telegram
