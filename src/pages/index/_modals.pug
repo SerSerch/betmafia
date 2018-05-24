@@ -16,7 +16,7 @@ mixin forecast-modal(id, title, desc, price)
         iframe(frameborder='0', allowtransparency='true', scrolling='no', src='https://money.yandex.ru/quickpay/shop-widget?account=410012786441685&quickpay=shop&payment-type-choice=on&mobile-payment-type-choice=on&writer=seller&targets='+ encodeURIComponent('Покупка прогноза Betmafia. ' + desc) +'&default-sum='+ price +'&button-text=01&fio=on&mail=on&phone=on&successURL=http%3A%2F%2Fbetmafia.ru%2Fthankyou.html', width='450', height='250')
 
 +forecast-modal('forecasts_pl', 'Английская Премьер Лига', 'АПЛ', 1000)
-+forecast-modal('forecasts_bl', 'Германия. Бендеслига', 'Бендеслига',1000)
++forecast-modal('forecasts_bl', 'Германия. Бундеслига', 'Бундеслига',1000)
 +forecast-modal('forecasts_usa', 'США. НХЛ', 'НХЛ', 1000)
 +forecast-modal('forecasts_1time', '1 прогноз', '1 прогноз',1000)
 +forecast-modal('forecasts_1week', '1 неделя', '1 неделя',9900)
