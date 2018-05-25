@@ -12,7 +12,7 @@ const autoPlayYoutubeVideo = element => {
         branding: 0,
         showinfo: 0,
         controls: 0,
-        frameborder: 1,
+        frameborder: 0,
         allowfullscreen: true
       }
     });

@@ -1,5 +1,6 @@
 import 'promise-polyfill/src/polyfill';
 import { compose } from 'ramda';
+import { initReCaptcha } from './recaptcha';
 import { initModals } from './modals';
 import { initCounters } from './counters';
 import { initTopPanel } from './top-panel';
@@ -14,6 +15,7 @@ import {
 import { initSliders } from './sliders';
 
 const onload = compose(
+  initReCaptcha,
   initAjaxForms,
   initCounters,
   initModals,

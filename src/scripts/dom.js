@@ -15,6 +15,9 @@ const hasClass = curry(
   closest = curry(
     ( element, selector ) => element.closest( selector )
   ),
+  query = curry(
+    ( element, selector ) => element.querySelector( selector )
+  ),
   removeClass = curry(
     ( element, className ) => element.classList.remove( className )
   ),
@@ -33,5 +36,6 @@ export {
   child,
   children,
   closest,
+  query,
   on
 }
