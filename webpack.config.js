@@ -2,6 +2,7 @@ const path = require( 'path' ),
   ExtractTextWebpackPlugin = require( 'extract-text-webpack-plugin' ),
   HtmlWebpackPlugin = require( 'html-webpack-plugin' ),
   SpriteLoaderPlugin = require( 'svg-sprite-loader/plugin' ),
+  FaviconsWebpackPlugin = require( 'favicons-webpack-plugin' ),
   SpritesmithPlugin = require( 'webpack-spritesmith' );
 
 const postCSSLoader = {
@@ -177,6 +178,10 @@ module.exports = {
       env: process.env.NODE_ENV,
       getCriticalCSS
     }),
-    new SpriteLoaderPlugin
+    new SpriteLoaderPlugin,
+    new FaviconsWebpackPlugin({
+      logo: path.join( __dirname, 'src/img/favicon.jpg' ),
+      prefix: 'images/icons/[hash]'
+    })
   ]
 };
