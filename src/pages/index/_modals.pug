@@ -20,7 +20,18 @@ mixin forecast-modal(id, title, desc, price)
 +forecast-modal('forecasts_usa', 'США. НХЛ', 'НХЛ', 1000)
 +forecast-modal('forecasts_1time', '1 прогноз', '1 прогноз',1000)
 +forecast-modal('forecasts_1week', '1 неделя', '1 неделя',9900)
-+forecast-modal('forecasts_1month', '1 месяц', '1 месяц',24000)
+//+forecast-modal('forecasts_1month', '1 месяц', '1 месяц',24000)
+
++modal('forecasts_1month', 'Заявка на подписку')
+    .text-center
+        p Для оформления подписки напишите лично нашему менеджеру
+        .social-links.social-links_1month
+            a.social-links__link(href='https://api.whatsapp.com/send?phone=79388659997' target="_blank")
+                i.social-links__icon.social-links__icon_whatsapp
+            a.social-links__link(href='https://t-do.ru/betmafia' target="_blank")
+                i.social-links__icon.social-links__icon_telegram
+            a.social-links__link(href='https://vk.me/gbetmafia' target="_blank")
+                i.social-links__icon.social-links__icon_vk
 
 +modal('whatsapp-modal', 'Напишите нам в WhatsApp')
     a.whatsapp-modal__phone(href="https://api.whatsapp.com/send?phone=79388659997", target="_blank") +7 (938) 865-99-97

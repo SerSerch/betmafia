@@ -9,11 +9,13 @@ footer.footer
         a.social-links__link(href='https://www.instagram.com/betmafia/' target="_blank")
             i.social-links__icon.social-links__icon_instagram
     .services.container
-        a.services__link(href="#")
+        a.services__link(href="https://itunes.apple.com/us/app/betmafia/id1213284367?ls=1&amp;mt=8")
             img.services__img(src=require('../../img/app_store.png'), alt="сервис")
         a.services__link.services__link_first(href="#")
             img.services__img(src=require('../../img/logoblack.png'), alt="сервис")
-        -let list = ['google_app.png', 'yandex.png', 'visa.png', 'mobile.png']
+        a.services__link(href="https://play.google.com/store/apps/details?id=ru.betmafia.app")
+            img.services__img(src=require('../../img/google_app.png'), alt="сервис")
+        -let list = ['yandex.png', 'visa.png', 'mobile.png']
         each val in list
             a.services__link(href="#")
                 img.services__img(src=require(`../../img/${val}`), alt="сервис")
