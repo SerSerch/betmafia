@@ -1,0 +1,12 @@
+<svg class="svgicon" id="chart" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+    <path fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d=" M26.132,48.334c-0.177,0.436-0.363,0.832-0.549,1.372c-4.112,0.397-6.997,1.332-6.997,2.42c0,1.45,5.125,2.627,11.446,2.627 c6.322,0,11.445-1.177,11.445-2.627c0-1.088-2.882-2.021-6.993-2.42c-0.199-0.577-0.327-0.969-0.508-1.421"></path>
+    <path fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d=" M59,42.904c0,1.912-1.551,3.461-3.462,3.461c0,0-14.248,2.008-26.256,2.008c-9.195,0-24.82-2.008-24.82-2.008 C2.55,46.365,1,44.815,1,42.904V8.71c0-1.913,1.55-3.462,3.462-3.462h51.076C57.449,5.248,59,6.797,59,8.71V42.904z"></path>
+    <rect x="5.902" y="9.479" fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="48.074" height="32.517"></rect>
+    <circle fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="17.393" cy="29.851" r="2.772"></circle>
+    <circle fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="31.872" cy="23.171" r="2.772"></circle>
+    <circle fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="47.012" cy="15.592" r="2.772"></circle>
+    <line fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="49.173" y1="13.874" x2="53.976" y2="9.948"></line>
+    <line fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="34.416" y1="22.075" x2="44.568" y2="16.834"></line>
+    <line fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="19.921" y1="28.719" x2="29.482" y2="24.421"></line>
+    <line fill="none" stroke="rgb(0, 0, 0)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="5.919" y1="41.427" x2="15.409" y2="31.84"></line>
+</svg>

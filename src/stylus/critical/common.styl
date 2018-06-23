@@ -1,0 +1,232 @@
+@import "../../node_modules/normalize.css/normalize.css"
+@import "../../node_modules/tiny-slider/dist/tiny-slider.css"
+@import "../../node_modules/lazyframe/dist/lazyframe.css"
+
+@import "_util/variables.styl"
+@import "_util/mixins.styl"
+
+body
+  font-family 'Open Sans', sans-serif
+  line-height 1.4
+
+html,
+body
+  height 100%
+  margin 0
+  padding 0
+
+h1,
+h2,
+h3
+  margin 0
+  padding 1em 0
+  line-height 1.1
+
+figure
+  margin 0
+iframe
+  max-width 100%
+
+.app
+  display -webkit-box
+  display -ms-flexbox
+  display flex
+  flex-direction column
+  height 100%
+
+.main
+  flex 1 0 auto
+
+.footer
+  flex 0 0 auto
+
+.container
+  max-width wcontainer
+  margin 0 auto
+  width 100%
+  position relative
+
+.top-panel
+  display none
+
+.text-center
+  text-align center
+
+.header
+  position relative
+  box-sizing border-box
+  color pcolor
+  background-size cover
+  background-position top center
+  overflow hidden
+  &__video-container
+    position absolute
+    top 0
+    width 100%
+    height 100%
+    overflow hidden
+    background-image url("../img/header_bg.png")
+    background-size cover
+    background-position top center
+  &__video-box
+    display none
+  &__blackout
+    position relative
+    z-index 2
+    padding 55px 0 0 0
+    box-sizing border-box
+    background-image linear-gradient(rgba(46, 45, 45, 0.909804) 0%, rgba(0, 0, 0, 0.729412) 100%)
+  &__divider
+    position absolute
+    bottom 0
+    width 100%
+    height 50px
+  &__title
+    caption()
+    font-size 46px
+    padding-bottom 10px
+
+.advantages
+  display flex
+  justify-content center
+  padding-top 80px
+  flex-wrap wrap
+
+  &__item
+    flex-grow 1
+    max-width 390px
+    text-align center
+    box-sizing border-box
+    padding 5px
+
+  &__item-icon
+    height 97px
+
+  &__item-text
+    font-weight 700
+    font-size 16px
+    min-height 50px
+    max-width 300px
+    margin 0 auto
+    box-sizing border-box
+    padding-top 10px
+
+.button-next
+  width 70px
+  height 70px
+  margin 0 auto
+  text-align center
+  color pcolor
+  border-radius 100%
+  &__icon
+    width 12px
+    height 20px
+    transform rotate(90deg)
+    display inline-block
+    position relative
+    font-style normal
+    text-align left
+    text-indent -9999px
+    direction ltr
+    &:before,
+    &:after
+      content: ''
+      pointer-events none
+      width 14px
+      height 3px
+      position absolute
+      margin auto 0
+      left 22px
+      box-shadow inset 0 0 0 32px
+      transform-origin right
+    &:before
+      top 10px
+      transform rotate(45deg)
+    &:after
+      top 8px
+      transform rotate(-45deg)
+  &:hover,
+  &:active
+    background-color rgba(15, 14, 14, 0.19)
+    border-color rgb(15, 14, 14)
+    cursor pointer
+
+/* _____ */
+
+.forecasts
+  min-height 796px
+  padding-bottom 50px
+  box-sizing border-box
+  position relative
+  &__title
+    caption()
+  &__divider
+    position absolute
+    width 100%
+    height 50px
+    bottom -50px
+    z-index 2
+
+.forecasts-purchase
+  display flex
+  flex-wrap wrap
+  justify-content center
+  &__item
+    min-height 280px
+    flex-grow 1
+    max-width 370px
+    min-width 273px
+    text-align center
+    box-sizing border-box
+    padding 10px
+    margin 10px
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+    //box-shadow 0px 2px 5px 0px rgba(0, 0, 0, 0.5)
+    border-radius 5px
+  &__picture
+    //height 200px
+    flex-grow 1
+    width 150px
+    object-fit contain
+    &_apl
+      height 176px
+  &__name
+    display flex
+    justify-content center
+    align-items center
+    min-height 46px
+    padding-top 5px
+    box-sizing border-box
+    &_big
+      font-size 36px
+      font-weight 700
+  &__buy
+    width 76px
+    height 34px
+    margin 10px auto
+    display inline-block
+    text-decoration none
+    line-height 34px
+    text-align center
+    color pcolor
+    background-color scolor
+    box-shadow 0px 2px 5px 0px rgba(0, 0, 0, 0.5)
+    border-radius 5px
+    &:hover,
+    &:active
+      cursor pointer
+
+.lazyframe__image
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  right 0
+  width 100%
+  height 100%
+
+.modal
+  display none
