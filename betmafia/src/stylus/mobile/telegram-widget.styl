@@ -1,0 +1,45 @@
+.telegram-widget
+  position fixed
+  bottom 20px
+  right 20px
+  //background #b30038
+  width 66px
+  height 60px
+  border-radius 100%
+  z-index 10
+
+  &:before
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    content ''
+    display block
+    border-radius 100%
+    animation 2s telegram-widget__animation ease-in-out infinite
+    //animation-direction alternate
+    border 1px solid #2ca5e09e
+  &__link
+    position absolute
+    height 100%
+    width 100%
+    display flex
+    align-items center
+    justify-content center
+  &__icon
+    max-width 100%
+
+@keyframes telegram-widget__animation
+  0%
+    width 100%
+    height 100%
+    left 0
+    top 0
+    opacity 1
+  100%
+    width 150%
+    height 150%
+    left -25%
+    top -25%
+    opacity 0
