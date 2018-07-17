@@ -3,8 +3,8 @@
   bottom 20px
   right 20px
   //background #b30038
-  width 66px
-  height 60px
+  width 80px
+  height 80px
   border-radius 100%
   z-index 10
 
@@ -17,6 +17,8 @@
     content ''
     display block
     border-radius 100%
+    margin-top -1px
+    margin-left -1px
     animation 2s telegram-widget__animation ease-in-out infinite
     //animation-direction alternate
     border 1px solid #2ca5e09e
@@ -28,7 +30,17 @@
     align-items center
     justify-content center
   &__icon
-    max-width 100%
+    width 100%
+    height 100%
+    position absolute
+    left 0
+    top 0
+    .icon
+      position absolute
+      left 0
+      top 0
+      width 100%
+      height 100%
 
 @keyframes telegram-widget__animation
   0%

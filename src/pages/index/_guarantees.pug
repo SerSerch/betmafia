@@ -2,22 +2,34 @@ section.guarantees#guarantees
     h3.guarantees__title Какие гарантии мы даем?
     .guarantees-info.container
         figure.guarantees-info__item
-            img.guarantees-info__img(src=require("../../svg/moneyback.svg").url, alt="Если какой-то прогноз не заходит, замену даём бесплатно")
+            //img.guarantees-info__img(src=require("../../svg/moneyback.svg").url, alt="Если какой-то прогноз не заходит, замену даём бесплатно")
+            .guarantees-info__img
+                +svg-icon( 'moneyback' )
             figcaption.guarantees-info__text Если какой-то прогноз не заходит, замену даём бесплатно
         figure.guarantees-info__item
-            img.guarantees-info__img(src=require("../../svg/pay.svg").url, alt="Мы сами ставим на свои прогнозы")
+            //img.guarantees-info__img(src=require("../../svg/pay.svg").url, alt="Мы сами ставим на свои прогнозы")
+            .guarantees-info__img
+                +svg-icon( 'pay' )
             figcaption.guarantees-info__text Мы сами ставим на свои прогнозы
         figure.guarantees-info__item
-            img.guarantees-info__img(src=require("../../svg/official.svg").url, alt="Официальные реквизиты. Все наши кошельки идентифицированы")
+            //img.guarantees-info__img(src=require("../../svg/official.svg").url, alt="Официальные реквизиты. Все наши кошельки идентифицированы")
+            .guarantees-info__img
+                +svg-icon( 'official' )
             figcaption.guarantees-info__text Официальные реквизиты. Все наши кошельки идентифицированы
         figure.guarantees-info__item
-            img.guarantees-info__img(src=require("../../svg/help.svg").url, alt="Быстрая и профессиональная помощь любому новичку")
+            //img.guarantees-info__img(src=require("../../svg/help.svg").url, alt="Быстрая и профессиональная помощь любому новичку")
+            .guarantees-info__img
+                +svg-icon( 'help' )
             figcaption.guarantees-info__text Быстрая и профессиональная помощь любому новичку
         figure.guarantees-info__item
-            img.guarantees-info__img(src=require("../../svg/mustache-beard.svg").url, alt="Большая команда, где один прогнозист работает с одним видом спорта")
+            //img.guarantees-info__img(src=require("../../svg/mustache-beard.svg").url, alt="Большая команда, где один прогнозист работает с одним видом спорта")
+            .guarantees-info__img
+                +svg-icon( 'mustache-beard' )
             figcaption.guarantees-info__text Большая команда, где один прогнозист работает с одним видом спорта
         figure.guarantees-info__item
-            img.guarantees-info__img(src=require("../../svg/chart.svg").url, alt="Разумные коэффициенты и высокая проходимость")
+            //img.guarantees-info__img(src=require("../../svg/chart.svg").url, alt="Разумные коэффициенты и высокая проходимость")
+            .guarantees-info__img
+                +svg-icon( 'chart' )
             figcaption.guarantees-info__text Разумные коэффициенты и высокая проходимость
     .guarantees__divider
         include ../layout/_right-divider

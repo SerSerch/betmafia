@@ -10,6 +10,11 @@ const postCSSLoader = {
     options: {
       config: {
         path: path.join( __dirname, 'postcss.config.js' ),
+        ctx: {
+          cssnano: {
+            zindex: false
+          }
+        }
       }
     }
   },
