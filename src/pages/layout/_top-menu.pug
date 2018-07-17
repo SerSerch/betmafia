@@ -1,0 +1,32 @@
+.top-panel.top-panel_active
+  .container
+    a.logo-link(href="#")
+      img.logo.logo_desktop(src=require('../../img/logo-alt.png'), alt="Betmafia")
+      img.logo.logo_mobile(src=require('../../img/logo-mobile.png'), alt="Betmafia")
+    nav.nav
+      input.menu-checkbox(type="checkbox" id="menu-checkbox")
+      label.menu-button(for="menu-checkbox")
+        i.menu-button__icon
+      label.menu__background(for="menu-checkbox")
+      .menu
+        ul.menu__container
+          li.menu__item
+            a.menu__section(href="#forecasts") Прогнозы
+          li.menu__item
+            a.menu__section(href="#feedback") Отзывы
+          li.menu__item
+            a.menu__section(href="#guarantees") Гарантии
+          li.menu__item
+            a.menu__section(href="#become-partner") Франшиза
+          li.menu__item
+            a.menu__section(href="#about") О нас
+          li.social-links
+            a.social-links__link(href='https://api.whatsapp.com/send?phone=79388659997' target="_blank")
+              i.social-links__icon.social-links__icon_whatsapp
+            a.social-links__link(href='https://t-do.ru/betmafia' target="_blank")
+              i.social-links__icon.social-links__icon_telegram
+            a.social-links__link(href='https://vk.me/gbetmafia' target="_blank")
+              i.social-links__icon.social-links__icon_vk
+            a.social-links__link(href='https://www.instagram.com/betmafia/' target="_blank")
+              i.social-links__icon.social-links__icon_instagram
+

@@ -1,0 +1,8 @@
+<svg class="svgicon" id="stat" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+    <path fill="none" stroke="#ffffff" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d=" M17.511,56.687c0,1.277-1.035,2.313-2.315,2.313H6.066c-1.277,0-2.315-1.036-2.315-2.313V46.181 c0-1.277,1.038-2.312,2.315-2.312h9.129c1.28,0,2.315,1.034,2.315,2.312V56.687z"></path>
+    <path fill="none" stroke="#ffffff" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d=" M36.635,56.687c0,1.277-1.036,2.313-2.314,2.313h-9.131c-1.277,0-2.314-1.036-2.314-2.313V34.781 c0-1.28,1.037-2.314,2.314-2.314h9.131c1.278,0,2.314,1.034,2.314,2.314V56.687z"></path>
+    <path fill="none" stroke="#ffffff" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d=" M56.249,56.687c0,1.277-1.036,2.313-2.315,2.313h-9.131c-1.276,0-2.314-1.036-2.314-2.313V20.571 c0-1.278,1.038-2.313,2.314-2.313h9.131c1.279,0,2.315,1.035,2.315,2.313V56.687z"></path>
+    <line fill="none" stroke="#ffffff" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="42.59" y1="1.012" x2="10.801" y2="32.799"></line>
+    <line fill="none" stroke="#ffffff" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="42.588" y1="1" x2="31.434" y2="1"></line>
+    <line fill="none" stroke="#ffffff" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="42.588" y1="1.021" x2="42.588" y2="12.174"></line>
+</svg>

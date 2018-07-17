@@ -1,0 +1,10 @@
+script(src="bundle.js", async)
+if htmlWebpackPlugin.options.env === 'production'
+    - const onload = "this.onload=null;this.rel='stylesheet'";
+    link(rel="preload", as="style", href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic", onload!=onload)
+    link(rel="preload", as="style", href="css/mobile.css", onload!=onload)
+    noscript
+        link(rel="stylesheet", href="css/mobile.css")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic")
+    link(rel="stylesheet", href="css/tablet.css", media="(min-width: 768px)")
+    link(rel="stylesheet", href="css/desktop.css", media="(min-width: 1024px)")
